@@ -1,28 +1,73 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Marius M&uuml;ller</title>
     <style>
-        .font{
+        div, a{
             font-family: Helvetica,Verdana,sans-serif;
             color: darkblue;
+            text-decoration: none;
+            text-align: center;
+            font-size: 3vw;
         }
-        .redirs{
-            width: 50%;
+        .divFrame{
+            width: 98%;
+            margin-top: 10vw;
+            background-color: white;
+            box-shadow:0 0 8px rgba(0, 0, 0, 0.4);
+        }
+        .divName{
+            padding: 15px;
+            font-size: 8vw;
+            font-weight: bold;
+        }
+        .divRedir{
+            width: 100%;
+            background: #f0f0f0;
+        }
+        ul {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            padding: 20px 0 20px 0;
+            list-style: none;
             float: left;
+            text-align: center;
+            width: 50%; /* fallback for non-calc() browsers */
+            width: calc(100% / 2);
+            box-sizing: border-box;
+        }
+        li:hover {
+            background-color: darkgray;
+        }
+        @media only screen and (orientation: landscape) and (min-width: 600px) {
+            .divFrame{
+                margin-top: 10vw;
+                max-width: 700px;
+            }
+            .divName{
+                font-size: 52px;
+            }
+            a{
+                font-size: 18px;
+            }
         }
     </style>
 </head>
-<body class="font" style="background-color: lightgray">
-    <form id="form1" runat="server">
-        <div style="border-radius:15px;box-shadow:0 0 8px rgba(0, 0, 0, 0.4);padding:25px;width:400px;height:60px;background:white;text-align:center;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0">
-            <div class="font" style="width: 100%;margin: 0 0 5px 0;padding: 0 0 5px 0;border-bottom-width: 1px; border-bottom-style: solid; font-size: 32px; font-weight:bold">Dr. Marius M&uuml;ller</div>
-            <a href="http://www.linkedin.com/in/drmariusmueller" target="_top">
-                <div class="font redirs">LinkedIn</div>
-            </a>
-            <a href="https://www.xing.com/profile/Marius_Mueller2" target="_top">
-                <div class="font redirs">XING</div>
-            </a>
+<body style="background-color: lightgray">
+    <center>
+        <div class="divFrame">
+            <div class="divName">Dr. Marius M&uuml;ller</div>
+            <div class="divRedir">
+                <ul>
+                    <a href="http://www.linkedin.com/in/drmariusmueller" target="_top"><li>LinkedIn</li></a>
+                    <a href="https://www.xing.com/profile/Marius_Mueller2" target="_top"><li>XING</li></a>
+                </ul>
+            </div>
         </div>
-    </form>
+    </center>
 </body>
 </html>
